@@ -1,0 +1,394 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+body {
+    background-color: #BDBF09;
+    font-family: 'Lato', sans-serif;
+    font-size: 100%;
+    color: white;
+    padding-bottom: 150px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.875em;
+    text-align: center;
+}
+
+p {
+    font-size: 0.875em;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toplogo {
+    margin-top: 4em;
+}
+
+.toplogo2 {
+    margin-top: 2em;
+}
+
+.toprighterhome {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+.toprighter {
+    position: absolute;
+    top: 0.4em;
+    right: 0.4em;
+}
+
+.toprightergame {
+    position: absolute;
+    top: 0.5em;
+    right: 0em;
+    margin-top: 0.9em;
+}
+
+.toplefter {
+    position: absolute;
+    top: 0.5em;
+    left: 0em;
+    margin-top: 0.9em;
+}
+
+.bottomrighter {
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+}
+
+
+
+
+
+.playbutton {
+	background-color:#2292A4;
+	border-radius:4em;
+	border:3px solid #ffffff;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:2em;
+	padding:16px 31px;
+	text-decoration:none;
+    text-align: center;
+    line-height: 3em;
+    margin-top: 3em;
+}
+.playbutton:hover {
+	background-color:#27bfd6;
+}
+.playbutton:active {
+	position:relative;
+	top:1px;
+}
+
+.skipbutton {
+	background-color:#2292A4;
+	border:3px solid #ffffff;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:2em;
+	padding:2px 31px;
+	text-decoration:none;
+    text-align: center;
+    line-height: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.skipbutton:hover {
+	background-color:#27bfd6;
+}
+.skipbutton:active {
+	position:relative;
+	top:1px;
+}
+
+.footer {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom:0px;
+    width:100%;
+}
+
+.livescorer {
+    background-color:#2292A4;
+	border:3px solid #ffffff;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	padding:2px 10px;
+	text-decoration:none;
+    text-align: center;
+    line-height: 1em;
+}
+
+.innerartwork {
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 30px; /* Need a specific value to work */
+}
+
+
+.material-symbols.md-light { color: rgba(255, 255, 255, 1); }
+
+
+
+
+
+
+
+.circle-bg {
+    background-color:#2292A4;
+	border:3px solid #ffffff;
+	cursor:pointer;
+	color:#ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: table;
+    left: 50%;
+    top: 80%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    vertical-align: middle;
+    -webkit-transform: translate(-50%, -80%);
+    -moz-transform: translate(-50%, -80%);
+    -o-transform: translate(-50%, -80%);
+    transform: translate(-50%, -80%);
+}
+  
+.icon {
+    color: white;
+    display: table-cell;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+  
+.outer-icons {
+    left: 50%;
+    top: 80%;
+    position: absolute;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -80%);
+    -moz-transform: translate(-50%, -80%);
+    -o-transform: translate(-50%, -80%);
+    transform: translate(-50%, -80%);
+}
+  
+.outer-icons i {
+    color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+  
+.one {
+    background-color: #55acee;
+    left: -120px;
+}
+  
+.two {
+    background-color: #3b5998;
+    left: -60px;
+    bottom: -150px;
+}
+  
+.three {
+    background-color: #dc4e41;
+    left: 60px;
+    bottom: -150px;
+}
+  
+.four {
+    background-color: #0077b5;
+    left: 120px;
+}
+
+
+
+
+
+
+input[type=url] {
+    width: 100%;
+    height: 3em;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    font-size: 1.2em;
+}
+
+.centerinput {
+    margin: auto;
+    width: 70%;
+}
+
+
+.artwork {
+    width: 30%;
+    background-color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.trackinfo {
+    text-align: center;
+}
+
+
+.round-time-bar {
+    margin: 0rem;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+.round-time-bar div {
+    height: 3em;
+    animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
+      forwards;
+    transform-origin: left center;
+    background: #2292A4;
+}
+  
+.round-time-bar[data-style="smooth"] div {
+    animation: roundtime calc(var(--duration) * 1s) linear forwards;
+}
+  
+@keyframes roundtime {
+    to {
+      /* More performant than `width` */
+      transform: scaleX(0);
+    }
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding: 10px;
+}
+.grid-item {
+    background-color: #2292A4;
+    border: 1px solid rgba(255,255,255, 0.8);
+    padding: 10px;
+    margin: 2px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+  
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  
+  .fa-android {
+    background: #a4c639;
+    color: white;
+  }
+  
+  .fa-reddit {
+    background: #ff5700;
+    color: white;
+  }
+  
+  .fa-rss {
+    background: #ff6600;
+    color: white;
+  }
+
+  .fa-whatsapp {
+    background: #25D366;
+    color: white;
+  }
+
+  .fa-link {
+    background: #686868;
+    color: white;
+  }

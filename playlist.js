@@ -1,0 +1,93 @@
+const clientId = "295b2220f8ce4d888c3eb996c59b9e17";
+const redirectUri = 'https://tunetangle.dawsonpanterwray.co.uk/playlist.html';
+
+const urlParams = new URLSearchParams(window.location.search);
+let code = urlParams.get('code');
+
+let codeVerifier = localStorage.getItem('code-verifier');
+
+let body = new URLSearchParams({
+  grant_type: 'authorization_code',
+  code: code,
+  redirect_uri: redirectUri,
+  client_id: clientId,
+  code_verifier: codeVerifier
+});
+
+const response = fetch('https://accounts.spotify.com/api/token', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  body: body
+})
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('HTTP status ' + response.status);
+    }
+    return response.json();
+  })
+  .then(data => {
+    localStorage.setItem('access-token', data.access_token);
+    getProfile(data.access_token);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+async function getProfile(accesstk) {
+    console.log("ACCESS TOKEN")
+    console.log(accesstk);
+  
+    const response = await fetch('https://api.spotify.com/v1/me', {
+      headers: {
+        Authorization: 'Bearer ' + accesstk
+      }
+    });
+  
+    const data = await response.json();
+    console.log(data)
+    displayname = data.display_name
+    localStorage.setItem('displayname', displayname);
+
+    document.getElementById("namearea").innerHTML="Great! Hi "+displayname;
+}
+
+
+function readplaylist() {
+    let playlist_url = document.getElementById("playlisturl");
+    let actualplaylist_url = document.getElementById("playlisturl").value;
+
+    if (actualplaylist_url == "") {
+        alert("Please enter a link");
+        return false;
+    }
+
+    if (!playlist_url.checkValidity()) {
+        alert("Not a valid link")
+        return false;
+      } else {
+        console.log("link provided")
+    }
+
+    var spliturl = actualplaylist_url.split("/");
+
+    usefulbiturl = spliturl[4];
+    usefulbiturl2 = usefulbiturl.split("?");
+    actualusefulurl = usefulbiturl2[0];
+    console.log(spliturl[3])
+    if (spliturl[2] != "open.spotify.com") {
+        alert("Not a spotify link")
+        return false;
+    } else if (spliturl[3] != "playlist") {
+        alert("Not a spotify playlist")
+        return false;
+    } else {
+        console.log("A SPOTIFY PLAYLIST URL HAS BEEN DETECTED")
+        console.log("ALL CLEAR")
+        console.log(actualusefulurl)
+        localStorage.setItem('playlist-url', actualusefulurl);
+        location.href = "/prestart.html"
+        return true;
+    }
+}
